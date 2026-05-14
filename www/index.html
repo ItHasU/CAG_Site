@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Club d'Athlétisme Guilérien</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
+    <script type="module" src="secure-link.js"></script>
+</head>
+
+<body>
+    <header class="container mt-3 mb-3">
+        <div class="d-flex flex-column flex-sm-row justify-content-between">
+            <div class="cag-font d-flex flex-row">
+                <div>
+                    <img src="assets/hermine.png" class="img-fluid" alt="Logo">
+                </div>
+                <div class="ms-2">
+                    <div class="fs-2">CAG</div>
+                    <div class="fs-6" style="margin-top: -15px;">Club d'Athlétisme Guilérien</div>
+                </div>
+            </div>
+            <div class="card text-bg-light shadow-sm">
+                <div class="card-body">
+                    <!--
+                        <a href="https://chat.whatsapp.com/Lp5nnpaaoA51XYjjYRPdTy?mode=gi_t" target="_blank"
+                        class="link-success link-underline-opacity-25 link-underline-opacity-100-hover me-2">
+                        <i class="bi bi-whatsapp"></i>&nbsp;WhatsApp</a>
+                    -->
+                    <a href="https://www.facebook.com/CAGuilers" target="_blank"
+                        class="link-primary link-underline-opacity-25 link-underline-opacity-100-hover me-2">
+                        <i class="bi bi-facebook"></i>&nbsp;Facebook</a>
+                    <a href="#contact"
+                        class="link-dark link-underline-opacity-25 link-underline-opacity-100-hover me-2">
+                        <i class="bi bi-telephone-fill"></i>&nbsp;Contacts</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Des jolies photos -->
+        <section class="container">
+            <div class="row">
+                <div class="col-md mb-3">
+                    <div id="carousel" class="carousel slide rounded shadow">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="assets/Photo_00001.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/Photo_00002.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/Photo_00004.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Précédent</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Suivant</span>
+                        </button>
+                    </div>
+                    <div class="text-center text-secondary fst-italic mt-2">
+                        Photos : Gaël Saliou
+                    </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Bienvenue au <b class="cag-font">Club d'Athlétisme Guilérien</b> !
+                                <br><br>
+                                <b>Guilers</b> profite d'une situation exceptionnelle pour la pratique de l'athlétisme
+                                sur la <b>seule piste couverte du Finistère</b> et une situation centrale permettant de
+                                rayonner dans les environs : bois de <b>Keroual</b>, fort et rives de <b>Penfeld</b>,
+                                lac de <b>Ty Colo</b>, ...
+                                <br>
+                                <b>Fondé en 1983</b>, le club organise également de <b>nombreuses compétitions</b>
+                                jusqu'au <b>niveau régional</b> ainsi que les <b>Foulées du diabète</b> en collaboration
+                                avec l'<a href="https://www.association-des-jeunes-diabetiques-du-finistere.fr/"
+                                    target="_blank">Association des Jeunes Diabétiques</a>.<br>
+
+                                <br>
+                                Le <b class="cag-font">CAG</b> fait partie de <a
+                                    class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                    href="https://iroiseathletisme.athle.fr/" target="_blank">l'Iroise
+                                    Athlétisme</a>.<br>
+                            </p>
+                            <div class="w-100 text-center">
+                                <a class="link-underline-opacity-0" href="https://iroiseathletisme.athle.fr/"
+                                    target="_blank">
+                                    <img src="assets/iroise_athletisme.png" alt="Iroise Athlétisme"
+                                        class="img-fluid w-25">
+                                </a>
+                            </div>
+                            <!--
+                                <p class="text-center mt-3">
+                                    <a href="#contact"
+                                    class="cag-font fs-3 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Rejoignez
+                                    nous !</a>
+                                </p>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Présentation des sections -->
+        <section class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="assets/athletisme.png" class="card-img-top" alt="Compétition d'athlétisme minime">
+                        <div class="card-body text-bg-primary">
+                            <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                href="#athletisme-detail">
+                                <h2 class="card-title cag-font text-center">
+                                    Athlétisme
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="assets/marche_nordique.png" class="card-img-top" alt="Week-end marche nordique">
+                        <div class="card-body text-bg-success">
+                            <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                href="#marche-detail">
+                                <h2 class="card-title cag-font text-center">Marche nordique</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="assets/running.png" class="card-img-top"
+                            alt="La section running aux foulées de Guisseny">
+                        <div class="card-body text-bg-danger">
+                            <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                href="#running-detail">
+                                <h2 class="card-title cag-font text-center">Running</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Détails - Athlétisme -->
+        <section id="athletisme-detail" class="container mb-3">
+            <div class="card mb-3">
+                <div class="card-header text-bg-primary fs-3 cag-font">Athlétisme</div>
+                <div class="card-body">
+                    <h3 class="cag-font">Actualités</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/CAGuilers">Page Facebook</a></li>
+                        <li><a target="_blank" href="https://iroiseathletisme.athle.fr/">Iroise Athlétisme</a></li>
+                        <li><a target="_blank" href="https://athle29.fr/">Comité Départemental 29</a></li>
+                    </ul>
+                    <h3 class="cag-font">Informations</h3>
+                    Le Club d'Athlétisme Guilérien propose des entraînements accessibles à <b>toutes les
+                        catégories</b> selon les recommandations de la <b>Fédération Française d'Athlétisme</b>.
+                    Les équipements du club permettent de découvrir l'<b>ensemble des disciplines de l'athlétisme</b>.
+                    Les athlètes pratiquent donc des <b>activités variées</b> puis se spécialisent à partir du niveau
+                    cadet (entrée au lycée).<br>
+
+                    Des <b>rencontres sont proposées aux athlètes</b> dès la catégorie éveil, sous forme de Kid'Athlé
+                    (épreuves ludiques). Les rencontres évoluent ensuite au cours des apprentissages vers <b>différentes
+                        formes de compétitions</b> (cross, triathlon, pentathlon, équip'athlé, ...). Nous y participons
+                    sous la <b>bannière de l'Iroise Athlétisme</b> avec les membres des autres clubs.<br>
+
+                    <h3 class="cag-font">Inscription</h3>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Année de naissance</th>
+                                    <th>Niveau</th>
+                                    <th>Horaires</th>
+                                    <th>Tarif licence 2025-2026</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2019 - 2021</td>
+                                    <td>Baby</td>
+                                    <td>Mercredi 15h45-16h30</td>
+                                    <td>120 €</td>
+                                </tr>
+                                <tr>
+                                    <td>2017 - 2019</td>
+                                    <td>Eveil</td>
+                                    <td>Mercredi 10h à 11h30</td>
+                                    <td>130 €</td>
+                                </tr>
+                                <tr>
+                                    <td>2015 - 2016</td>
+                                    <td>Poussin</td>
+                                    <td>
+                                        Mercredi 18h30-20h00<br>
+                                        Samedi 10h00-12h00
+                                    </td>
+                                    <td>140 €</td>
+                                </tr>
+                                <tr>
+                                    <td>2013 - 2014</td>
+                                    <td>Benjamin</td>
+                                    <td>
+                                        Jeudi 18h30 - 20h00<br>
+                                        Samedi 10h00 - 12h00
+                                    </td>
+                                    <td>150 €</td>
+                                </tr>
+                                <tr>
+                                    <td>2011 - 2012</td>
+                                    <td>Minime</td>
+                                    <td>
+                                        Mercredi 16h30 - 18h30<br>
+                                        Vendredi 17h30 - 19h30
+                                    </td>
+                                    <td>170 €</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        2009 - 2010<br>
+                                        2007 - 2008<br>
+                                        2004 - 2006<br>
+                                    </td>
+                                    <td>
+                                        Cadet<br>
+                                        Junior<br>
+                                        Espoir
+                                    </td>
+                                    <td>Selon spécialité</td>
+                                    <td>170 €</td>
+                                </tr>
+                                <tr>
+                                    <td>2003 - avant</td>
+                                    <td>
+                                        Senior<br>
+                                        Master
+                                    </td>
+                                    <td>Selon spécialité</td>
+                                    <td>180 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <span class="text-secondary fst-italic">Le tarif inclus l'inscription au club + la licence
+                                FFA.</span>
+                        </li>
+                        <li>
+                            <a href="ext/Bulletin_Inscription_Athlétisme.pdf" target="_blank">
+                                <i class="bi bi-file-earmark-fill"></i>&nbsp;Bulletin d'inscription athlétisme
+                                (2025-2026)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ext/Circulaire_Pass_Sport_2025_2026.pdf" target="_blank">
+                                <i class="bi bi-file-earmark-fill"></i>&nbsp;Circulaire Pass-Sport (2025-2026)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Détails - Marche nordique -->
+        <section id="marche-detail" class="container mb-3">
+            <div class="card mb-3">
+                <div class="card-header text-bg-success fs-3 cag-font">Marche nordique</div>
+                <div class="card-body">
+                    <h3 class="cag-font">Actualités</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/CAGuilers">Page Facebook</a></li>
+                    </ul>
+
+                    <h3 class="cag-font">Informations</h3>
+
+                    <p>
+                        La section MARCHE NORDIQUE compte 33 adhérents pour la saison 2025/2026.<br>
+
+                        La marche nordique est une autre conception de la marche, plus dynamique.
+                        Le principe est simple : il s’agit d’accentuer le mouvement naturel des bras pendant la marche
+                        et de
+                        propulser le corps vers l’avant à l’aide de deux bâtons qui permettent d’aller plus vite et de
+                        marcher plus longtemps. L’ensemble du corps entre en action et la dépense d’énergie est
+                        accrue.<br>
+
+                        Des informations complètes sont consultables sur le site de la Fédération Française d'Athlétisme
+                        à laquelle le CAG est affilié :
+                        <a href="https://www.athle.fr/contenu/forme-et-sante-marche-nordique/3121">Site de la FFA -
+                            Marche nordique</a>
+                    </p>
+
+                    <h4 class="cag-font text-secondary">Organisation des séances</h4>
+                    Les séances sont décomposées en 3 parties:
+                    <ul>
+                        <li>10 minutes d'échauffement</li>
+                        <li>
+                            <b>2 heures de marche</b><br>
+                            <span class="text-secondary fst-italic">
+                                Marche de 12 kms, rythme soutenu, vitesse supérieure à 6 km/h.<br>
+                                Objectif : maintenir ou améliorer sa forme, développer et améliorer son endurance
+                            </span>
+                        </li>
+                        <li>10 minutes d'étirements</li>
+                    </ul>
+
+                    <h4 class="cag-font text-secondary">Horaires</h4>
+                    Les sorties se déroulent le <b>mercredi après-midi à 14h</b> ainsi que le <b>dimanche matin à
+                        9h30</b>, tout au long de l’année, y compris durant les vacances scolaires. Les horaires sont
+                    ajustés lorsque des sorties sont organisées en dehors de Guilers. Le regroupement pour le
+                    covoiturage se fait alors vers 9h15.
+
+                    <h4 class="cag-font text-secondary">Les sorties</h4>
+                    Les sorties sont organisées tout au long de l'année sur Guilers et ses environs. Nous profitons
+                    pleinement des sentiers variés que nous offre notre région.<br>
+
+                    L'année est ponctuée par quelques temps forts comme la marche nocturne et le week-end de marche
+                    durant lesquels s'exprime toute la convivialité présente dans la section.
+
+                    <h4 class="cag-font text-secondary">L'équipement indispensable</h4>
+                    <ul>
+                        <li>Chaussures de trail ou de randonnée basse <b>avec crampons</b></li>
+                        <li>Tenue respirante de type course à pied, coupe-vent.</li>
+                        <li>Petit sac à dos pour la bouteille d’eau (ou sac d’hydratation).</li>
+                        <li>Bâtons : le club vous conseillera.</li>
+                    </ul>
+
+                    <div class="text-secondary fst-italic">
+                        NB : Il est bien sûr possible de participer à 2/3 séances d'essai avant de "s'engager" ! En
+                        début de saison, le club met à votre disposition les bâtons à votre taille.
+                    </div>
+
+                    <h3 class="cag-font">Inscription</h3>
+
+                    <ul>
+                        <li>Tarif : 75 € - Inclus la licence FFA</li>
+                        <li>
+                            <a href="ext/Bulletin_Inscription_Marche_Nordique.pdf" target="_blank">
+                                <i class="bi bi-file-earmark-fill"></i>&nbsp;Bulletin d'inscription marche nordique
+                                (2025-2026)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Détails - Athlétisme -->
+        <section id="running-detail" class="container mb-3">
+            <div class="card mb-3">
+                <div class="card-header text-bg-danger fs-3 cag-font">Running</div>
+                <div class="card-body">
+                    <h3 class="cag-font">Actualités</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/guilersathlejog">Page Facebook</a></li>
+                    </ul>
+
+                    <h3 class="cag-font">Informations</h3>
+                    Séances d’entraînement proposées :
+
+                    <h4 class="cag-font text-secondary">Mardi, 18h15</h4>
+                    <ul>
+                        <li>Séance de <b>(re)mise en jambes </b>pour débutant(e)s/repreneur(se)s <b>en début d’année</b>
+                            dans la salle d’athlétisme</li>
+                        <li>Séance de <b>renforcement musculaire</b> dans la salle d'athlétisme.</li>
+                    </ul>
+                    <b>OU</b> (au choix)
+                    <ul>
+                        <li><b>Travail de côtes</b> en extérieur.<br>
+                            <span class="text-secondary fst-italic">RDV à la salle d’athlétisme ou au portail d’entrée
+                                du complexe sportif Louis Ballard <a target="_blank"
+                                    href="https://maps.app.goo.gl/TJTbNMCBWi82QNbi6"> (plan d'accès)</a></span>
+                        </li>
+                    </ul>
+
+                    <h4 class="cag-font text-secondary">Mardi, 18h15</h4>
+                    <b>Sortie Endurance</b>, pour le plaisir de courir ensemble. 3 à 4 groupes de niveau pour que chacun
+                    puisse trouver sa place. <b>Circuits mixtes</b> (route/nature) de 7 à 12km, même en hiver (lampe
+                    frontale).
+                    Afin de découvrir d'autres sentiers, des circuits au départ des communes avoisinantes sont
+                    régulièrement proposés.
+                    <br>
+                    <span class="text-secondary fst-italic">RDV à la salle d’athlétisme ou au portail d’entrée du
+                        complexe sportif Louis Ballard <a target="_blank"
+                            href="https://maps.app.goo.gl/TJTbNMCBWi82QNbi6"> (plan d'accès)</a></span>
+
+                    <h4 class="cag-font text-secondary">Vendredi, 18h15</h4>
+                    Séances d’entraînement techniques, <b>fractionné</b> en extérieur ou sur la piste de la salle
+                    d’athlétisme :
+                    <ul>
+                        <li>VMA courte ou longue : du 30’’-30’’ au x400m</li>
+                        <li>Travail au seuil, fractionné long adapté aux objectifs de course.</li>
+                    </ul>
+                    <b>La salle d’athlétisme permet aux coureurs de réaliser les séances de fractionné à l’abri des
+                        intempéries !</b><br>
+                    <span class="text-secondary fst-italic">RDV à la salle d’athlétisme ou au portail d’entrée du
+                        complexe sportif Louis Ballard <a target="_blank"
+                            href="https://maps.app.goo.gl/TJTbNMCBWi82QNbi6"> (plan d'accès)</a></span>
+
+                    <h4 class="cag-font text-secondary">Dimanche, 8h45 ou 9h30</h4>
+                    Sorties « longues » : circuits mixtes, généralement à allure modérée pour privilégier l’endurance.
+                    Différents groupes de niveaux ou de distances sont constitués.<br>
+                    Départ 8h45 ou à 9h30.<br>
+                    <b>1 dimanche par mois en moyenne, une sortie « sentier côtier » en commun est proposée sur le
+                        GR34.</b><br>
+                    <span class="text-secondary fst-italic">RDV au parking du cimetière <a target="_blank"
+                            href="https://maps.app.goo.gl/uda7THs3FSxa1oGp7"> (plan d'accès)</a></span>
+
+                    <h3 class="cag-font">Inscription</h3>
+
+                    <ul>
+                        <li>
+                            Tarif : 45 € + en option 30 € pour la licence FFA
+                        </li>
+                        <li>
+                            Venez courir en famille : 5 € offerts sur les licences suivantes.
+                        </li>
+                        <li>
+                            <a href="ext/Bulletin_Inscription_Running.pdf" target="_blank">
+                                <i class="bi bi-file-earmark-fill"></i>&nbsp;Bulletin d'inscription running
+                                (2025-2026)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ext/Attestation_QS_Sport_Running.pdf" target="_blank">
+                                <i class="bi bi-file-earmark-fill"></i>&nbsp;Questionnaire santé
+                                (2025-2026)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inscriptions / Contacts -->
+        <section id="contact" class="container mb-3">
+            <div class="card mb-3">
+                <div class="card-header text-bg-dark fs-3 cag-font">Contacts</div>
+                <div class="card-body d-flex flex-column flex-lg-row w-100">
+                    <div class="flex-grow-1">
+                        <h5 class="card-title">Adresse</h5>
+                        <p class="card-text">
+                            Club d'Athlétisme Guilérien<br>
+                            4 Rue Charles Berthelot - 29820 Guilers
+                        </p>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h5 class="card-title">Contacts</h5>
+                        <p class="card-text">
+                            Roger QUENTEL (Président) - Général + Athlétisme<br>
+                            <secure-link data-type="tel" data-url="KzMzIDYgNDMgNzEgNTEgNzg="></secure-link><br>
+                            Florence LESVEN - Marche Nordique<br>
+                            <secure-link data-type="tel" data-url="KzMzIDYgMzAgMjEgNTYgNDM="></secure-link><br>
+                            Frédéric SCHAEFER - Running<br>
+                            <secure-link data-type="tel" data-url="KzMzIDYgODIgNjIgMDUgODU="></secure-link><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legal" class="container mb-3 text-center text-secondary fst-italic">
+            <p>
+                Club d'Athlétisme Guilérien - Association régie par la loi du 1er juillet 1901
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
