@@ -1,5 +1,5 @@
 :root,
-[data-bs-theme=ffa] {
+[data-bs-theme="ffa"] {
     --bs-primary: rgb(13, 35, 102);
     --bs-primary-rgb: 13, 35, 102;
     --bs-success: rgb(3, 206, 194);
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-    font-family: "Freshman";
+    font-family: Freshman;
     src: url("fonts/fershman.ttf")format("truetype");
     font-weight: normal;
     font-style: normal;
@@ -35,9 +35,9 @@ body {
 }
 
 .cag-font {
-    font-family: "Bauhaus Bugler Bold W00 Bold";
+    font-family: "Bauhaus Bugler Bold W00 Bold", sans-serif;
 }
 
 .ia-font {
-    font-family: "Freshman";
+    font-family: Freshman, sans-serif;
 }

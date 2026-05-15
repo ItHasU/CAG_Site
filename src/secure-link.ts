@@ -1,16 +1,18 @@
-"use strict";
 class SecureLink extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-    connectedCallback() {
+
+    connectedCallback(): void {
         const encodedData = this.getAttribute('data-url');
         const type = this.getAttribute('data-type') || 'raw';
-        if (!encodedData)
-            return;
+
+        if (!encodedData) return;
+
         // Décodage de la valeur Base64
         const decoded = atob(encodedData);
+
         const style = `
         <style>
         :host { display: inline; }
@@ -18,8 +20,9 @@ class SecureLink extends HTMLElement {
         span { color: inherit; }
         </style>
         `;
+
         // Logique selon le type
-        let content;
+        let content: string;
         switch (type) {
             case 'tel': {
                 const cleanTel = decoded.replace(/\s/g, ''); // Nettoie les espaces pour le lien
@@ -34,9 +37,11 @@ class SecureLink extends HTMLElement {
                 content = `<span>${decoded}</span>`;
                 break;
         }
+
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `${style}${content}`;
         }
     }
 }
+
 customElements.define('secure-link', SecureLink);
