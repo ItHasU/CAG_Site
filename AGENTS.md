@@ -1,33 +1,52 @@
-# AGENTS.md - CAG_Site Workflow Guide
+# Site du Club d'Athlétisme Guilérien (CAG)
 
-## ⚙️ Setup and Running the Application
+Ce document fournit un aperçu structuré du projet pour aider les agents IA à comprendre le contexte, l'architecture et les flux de travail.
 
-* **Dev Server:** To run a local HTTP server, use the dedicated Python script:
-    ```bash
-    python3 serve_www.py
-    ```
-    *Note:* Dans opencode, le serveur doit être lancé en arrière-plan (background) pour rester actif tout en permettant de saisir de nouvelles commandes :
-    ```bash
-    nohup python3 serve_www.py > server.log 2>&1 &
-    ```
-* **Déploiement:** Pour déployer le site, utiliser la commande suivante:
-    ```bash
-    upload.sh # Déploie dans le dossier preview/ afin de permettre une prévisualisation du futur site
-    upload.sh --prod # Réalise le déploiement en production (destination root)
-    ```
+## 📋 Présentation du projet
+Le projet est le site web officiel du **Club d'Athlétisme Guilérien (CAG)**, situé à Guilers (29).
+Il sert de vitrine pour les activités du club (Athlétisme, Marche Nordique, Running), diffuse les horaires, les tarifs et permet le téléchargement des bulletins d'inscription.
 
-Comportement spécifique du script `upload.sh` lors du déploiement en production :
-* Le script échoue s'il y a des modifications dans le dépôt git
-* Le commit courant est taggué avec la date courante
+**URL de production :** [https://www.guilersathle.fr/](https://www.guilersathle.fr/)
 
-## Déploiement de l'application
+## 🛠 Pile technologique
+- **Frontend :** HTML5, CSS3 (Bootstrap 5.3.8)
+- **Logique :** TypeScript (compilé en JavaScript ES modules)
+- **Composants :** 
+  - `secure-link` : Web Component personnalisé pour l'obfuscation de liens (téléphones, emails) via Base64.
+- **Outils de développement :**
+  - TypeScript pour le typage.
+  - ESLint, Stylelint, HTMLHint pour la qualité de code.
+  - Python (`serve_www.py`) pour le serveur de développement local.
 
-* Si l'utilisateur demande un déploiement, il faut toujours commencer par une preview
-* Ensuite il faut la confirmation que la preview convient bien
-* Puis seulement on peut passer le site en production
-* ⚠️ L'agent ne doit jamais faire le déploiement en production sans avoir explicitement demandé à l'utilisateur
+## 📂 Structure du répertoire
+- `www/` : Racine du serveur web (fichiers statiques servis).
+  - `index.html` : Page principale unique.
+  - `custom.css` : Styles spécifiques au club.
+  - `assets/` : Images, logos, fontes, ...
+  - `ext/` : Documents PDF (bulletins d'inscription, règlements).
+  - `fonts/` : Polices de caractères personnalisées.
+- `src/` : Code source TypeScript.
+  - `secure-link.ts` : Source du Web Component d'obfuscation.
+- `package.json` : Dépendances et scripts de build/lint.
+- `serve_www.py` : Script Python simple pour tester le site localement.
+- `upload.sh` : Script pour le déploiement de l'application
 
-## ⚠️ Key Architectural Notes
-* Le projet un site statique écrit directement en HTML, il n'y a donc pas de phase de compilation.
-* Les fichiers sont disponibles dans le dossier www/
-* Le dossier src/ contient des documents source (images, ...) utilisés pour générer du contenu dans la page.
+## ⚙️ Flux de travail (Workflows)
+
+### Développement
+1. Lancer le serveur de test : `npm run serve` (ou `python3 serve_www.py`).
+2. Compiler le TypeScript : `npm run build` (génère `www/secure-link.js`).
+3. Mode "watch" pour TS : `npm run watch`.
+
+### Déploiement
+1. Le déploiement commence toujours pas un déploiement en "preview" : `upload.sh`
+2. L'utilisateur doit vérifier à l'URL de production dans le dossier `/preview`
+
+### Qualité
+- Linter tout le projet : `npm run lint`.
+- Linters spécifiques : `npm run lint:html`, `npm run lint:css`, `npm run lint:ts`.
+
+## 💡 Notes importantes
+- **Obfuscation :** Les numéros de téléphone et emails dans `index.html` sont encodés en Base64 dans l'attribut `data-url` du composant `<secure-link>`.
+- **Typographie :** La classe CSS `.cag-font` utilise la police "Freshman" pour l'identité visuelle du club.
+- **Structure HTML :** Le site utilise des sections sémantiques avec des IDs (ex: `#athletisme-detail`) pour la navigation interne via ancres.
