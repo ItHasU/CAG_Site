@@ -34,7 +34,11 @@ if [ "$1" = "--prod" ]; then
         # Working directory is clean. Tag the current successful state with a timestamp for rollback safety.
         TAG=$(date +%Y-%m-%d_%H-%M-%S)
         echo "No uncommitted changes detected. Creating Git tag $TAG for deployment backup."
-        git tag -a "$TAG" -m "Deployment backup $TAG" || { echo "Warning: Could not create required tag $TAG."; } # Warn but don't fail the script on tagging failure.
+        if git tag -a "$TAG" -m "Deployment backup $TAG"; then
+            git push origin "$TAG" || echo "Warning: Could not push tag $TAG to origin.";
+        else
+            echo "Warning: Could not create required tag $TAG. Skipping remote push.";
+        fi
     fi
 fi
 
