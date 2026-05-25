@@ -1,10 +1,10 @@
 :root,
 [data-bs-theme="ffa"] {
-    --bs-primary: rgb(13, 35, 102);
+    --bs-primary: rgb(13 35 102);
     --bs-primary-rgb: 13, 35, 102;
-    --bs-success: rgb(3, 206, 194);
+    --bs-success: rgb(3 206 194);
     --bs-success-rgb: 3, 206, 194;
-    --bs-danger: rgb(255, 77, 82);
+    --bs-danger: rgb(255 77 82);
     --bs-danger-rgb: 255, 77, 82;
 }
 
@@ -31,7 +31,7 @@
 
 body {
     background-color: #f7f7f7;
-    color: rgb(13, 35, 102);
+    color: rgb(13 35 102);
 }
 
 .cag-font {
